@@ -1,6 +1,10 @@
-.PHONY : all heuristic
+.PHONY : all heuristic knapsack
 CC=gcc
 CFLAGS= -std=c++20 -lstdc++
+
+knapsack : knapsack/knapsack.c
+	$(CC) -o a.out knapsack/knapsack.c
+	./a.out
 
 heuristic: heuristic/main.cpp heuristic/heuristic_methods.hpp
 	$(CC) -o a.out heuristic/main.cpp heuristic/heuristic_methods.hpp $(CFLAGS)
